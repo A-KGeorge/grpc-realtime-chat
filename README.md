@@ -60,6 +60,19 @@ React-grpc chatapp/
 - **Scalable architecture** - gRPC for efficient client-server communication
 - **Advanced streaming** - Bidirectional gRPC streams for real-time updates
 
+## 📸 Screenshots
+
+### Login page
+
+<img width="1919" height="954" alt="image" src="https://github.com/user-attachments/assets/15f6c7ca-2319-4410-b707-b4295c0b28a5" />
+
+### Chat pages 
+
+<img width="1919" height="954" alt="image" src="https://github.com/user-attachments/assets/51b32418-371a-4c5c-b3a9-a66f15eec2b1" />
+
+<img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/f1db6ddb-5a77-46bb-a44f-f84cbac8ad02" />
+
+
 ## 📋 Prerequisites
 
 Before running this application, make sure you have installed:
