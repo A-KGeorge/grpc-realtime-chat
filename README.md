@@ -66,12 +66,11 @@ React-grpc chatapp/
 
 <img width="1919" height="954" alt="image" src="https://github.com/user-attachments/assets/15f6c7ca-2319-4410-b707-b4295c0b28a5" />
 
-### Chat pages 
+### Chat pages
 
 <img width="1919" height="954" alt="image" src="https://github.com/user-attachments/assets/51b32418-371a-4c5c-b3a9-a66f15eec2b1" />
 
 <img width="1919" height="953" alt="image" src="https://github.com/user-attachments/assets/f1db6ddb-5a77-46bb-a44f-f84cbac8ad02" />
-
 
 ## 📋 Prerequisites
 
@@ -328,6 +327,25 @@ Configure the following for production:
    protoc-gen-js --version
    protoc-gen-grpc-web --version
    ```
+
+7. **Multiple users causing connection issues**
+
+   If messages aren't being sent when 3+ users are connected:
+
+   ```bash
+   # Restart the backend server
+   cd backend
+   npm start
+
+   # Or restart Docker services
+   docker-compose restart
+   ```
+
+   **Temporary workarounds:**
+
+   - Keep user count to 2-3 concurrent users
+   - Refresh browsers if messages stop sending
+   - Check browser console for gRPC connection errors
 
 ## 🔄 Shutting Down
 
