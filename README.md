@@ -128,7 +128,7 @@ npm start
 
 The backend will be running on:
 
-- gRPC server: `localhost:50051`
+- gRPC server: `localhost:8082`
 - Envoy proxy: `localhost:8080`
 - Redis: `localhost:6379`
 
