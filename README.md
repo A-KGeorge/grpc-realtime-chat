@@ -1,6 +1,6 @@
 # React-gRPC Chat Application
 
-A real-time chat application built with React frontend, Node.js gRPC backend, and Redis for pub/sub messaging. The application demonstrates modern web technologies including gRPC-Web for browser-server communication and streaming for real-time features.
+A real-time chat application built with React frontend, Node.js gRPC backend, and Redis for pub/sub messaging. The application demonstrates modern web technologies including gRPC-Web for browser-server communication and streaming for real-time features. **Unlike traditional chat applications that rely on WebSockets, this project uses gRPC streaming for efficient, type-safe real-time communication.**
 
 ## 🚀 Tech Stack
 
@@ -52,12 +52,13 @@ React-grpc chatapp/
 
 ## 🛠 Features
 
-- **Real-time messaging** - Instant message delivery using gRPC streaming
+- **Real-time messaging** - Instant message delivery using gRPC streaming (no WebSockets required)
 - **User management** - User registration and avatar support
 - **Live user list** - See who's currently online
 - **Modern UI** - Clean, responsive interface with Material-UI
 - **Type safety** - Full TypeScript support across frontend and backend
 - **Scalable architecture** - gRPC for efficient client-server communication
+- **Advanced streaming** - Bidirectional gRPC streams for real-time updates
 
 ## 📋 Prerequisites
 
