@@ -328,24 +328,28 @@ Configure the following for production:
    protoc-gen-grpc-web --version
    ```
 
-7. **Multiple users causing connection issues**
+7. **Multi-user testing limitations (3+ users)**
 
-   If messages aren't being sent when 3+ users are connected:
+   **Issue**: When testing with 3+ users in the same browser, messages may not send properly or connections may drop.
+
+   **Cause**: Modern browsers limit concurrent HTTP/2 connections per origin. Since gRPC-Web uses HTTP/2, multiple users connecting to `localhost:8080` from the same browser can hit these limits.
+
+   **Solutions for local testing**:
 
    ```bash
-   # Restart the backend server
-   cd backend
-   npm start
+   # Option 1: Use different browsers
+   # - Chrome (User 1)
+   # - Firefox (User 2)
+   # - Edge or Safari (User 3)
 
-   # Or restart Docker services
-   docker-compose restart
+   # Option 2: Use incognito/private browsing windows
+   # Each incognito window has a separate connection pool
+
+   # Option 3: Use different browser profiles
+   # Chrome: Settings > Manage Profiles > Add Profile
    ```
 
-   **Temporary workarounds:**
-
-   - Keep user count to 2-3 concurrent users
-   - Refresh browsers if messages stop sending
-   - Check browser console for gRPC connection errors
+   **Note**: This limitation only affects local development testing. In production, users connect from different machines/networks, so this issue doesn't occur.
 
 ## 🔄 Shutting Down
 
